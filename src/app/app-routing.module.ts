@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {HomePageModule} from "./pages/home-page/home-page.module";
+import {HomePageComponent} from "./pages/home-page/home-page.component";
 
 const routes: Routes = [
-  {path: 'home',loadChildren:() => import('./pages/home-page/home-page.module').then(mod=>mod.HomePageModule)},
+  {path: '', component: HomePageComponent},
   {path: 'about',loadChildren:() => import('./pages/about-page/about-page.module').then(mod=>mod.AboutPageModule)},
   {path: 'contact',loadChildren:() => import('./pages/contact-page/contact-page.module').then(mod=>mod.ContactPageModule)},
   {path: 'gallery',loadChildren:() => import('./pages/gallery-page/gallery-page.module').then(mod=>mod.GalleryPageModule)},
